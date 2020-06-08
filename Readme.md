@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов» [![Build status][travis-image]][travis-url]
 
 * Студент: [Vladyslav Donchenko](https://up.htmlacademy.ru/react/4/user/608811).
-* Наставник: `Неизвестно`.
+* Наставник: [Студент без наставника].
 
 ---
 
