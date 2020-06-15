@@ -1,8 +1,8 @@
 import React from "react";
-import {offersType, titlesType} from "../../types";
+import {offersType, titlesType, onTitleClickType} from "../../types";
 
 const Main = (props) => {
-  const {offers, titles} = props;
+  const {offers, titles, onTitleClick} = props;
 
   return (
     <div className="page page--gray page--main">
@@ -118,7 +118,7 @@ const Main = (props) => {
                           </div>
                         </div>
                         <h2 className="place-card__name">
-                          <a href="#">{title}</a>
+                          <a href="#" onClick={onTitleClick}>{title}</a>
                         </h2>
                         <p className="place-card__type">Apartment</p>
                       </div>
@@ -139,7 +139,8 @@ const Main = (props) => {
 
 Main.propTypes = {
   offers: offersType,
-  titles: titlesType
+  titles: titlesType,
+  onTitleClick: onTitleClickType
 };
 
 export default Main;
