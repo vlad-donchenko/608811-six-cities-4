@@ -314,6 +314,7 @@ exports[`Should render Main 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Wood and stone place - 1
                   </a>
@@ -415,6 +416,7 @@ exports[`Should render Main 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Wood and stone place - 2
                   </a>
@@ -516,6 +518,7 @@ exports[`Should render Main 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Wood and stone place - 3
                   </a>
@@ -617,6 +620,7 @@ exports[`Should render Main 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Wood and stone place - 4
                   </a>
@@ -718,6 +722,7 @@ exports[`Should render Main 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Wood and stone place - 5
                   </a>
