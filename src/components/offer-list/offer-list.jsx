@@ -4,7 +4,7 @@ import {offersType, onTitleClickType} from "../../types";
 
 const OfferList = (props) => {
   const {offers, onTitleClick} = props;
-  console.log(offers);
+
   return (
     <div className="cities__places-list places__list tabs__content">
       {offers.map((offer, index) => (

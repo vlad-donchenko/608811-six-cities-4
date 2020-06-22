@@ -2,7 +2,7 @@ import React from "react";
 import {offerType} from "../../types";
 
 const OfferCard = (props) => {
-  const {offer} = props;
+  const {offer, onTitleClick} = props;
   const {title, picture, price, type, rating, isPremium, isBookmark} = offer;
 
   const premiumMarkup = isPremium ? (
@@ -39,7 +39,7 @@ const OfferCard = (props) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">{title}</a>
+          <a href="#" onClick={onTitleClick}>{title}</a>
         </h2>
         <p className="place-card__type">{type}</p>
       </div>
