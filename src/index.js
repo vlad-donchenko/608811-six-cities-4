@@ -1,19 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app.jsx";
-
-const OFFERS = 311;
-
-const titles = [
-  `Beautiful & luxurious apartment at great location`,
-  `Wood and stone place`,
-  `Canal View Prinsengracht`,
-  `Nice, cozy, warm big bed apartment`,
-  `Wood and stone place`
-];
+import {offers} from "./mock/work/offers";
 
 const init = () => {
-  ReactDOM.render(<App offers={OFFERS} titles={titles}/>, document.querySelector(`#root`));
+  ReactDOM.render(<App offers={offers}/>, document.querySelector(`#root`));
 };
 
 init();

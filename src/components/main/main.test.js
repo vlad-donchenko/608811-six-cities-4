@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from 'react-test-renderer';
 import Main from "./main";
-import {offers, titles} from "../../mock/test";
+import {offers} from "../../mock/test";
 
 it(`Should render Main`, () => {
-  const tree = renderer.create(<Main titles={titles} offers={offers} onTitleClick={() => {}}/>).toJSON();
+  const tree = renderer.create(<Main offers={offers} onTitleClick={() => {}}/>).toJSON();
 
   expect(tree).toMatchSnapshot();
 });
