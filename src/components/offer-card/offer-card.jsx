@@ -1,5 +1,5 @@
 import React from "react";
-import {offerType} from "../../types";
+import {offerType, onTitleClickType} from "../../types";
 
 const OfferCard = (props) => {
   const {offer, onTitleClick} = props;
@@ -48,7 +48,8 @@ const OfferCard = (props) => {
 };
 
 OfferCard.propTypes = {
-  offer: offerType
+  offer: offerType,
+  onTitleClick: onTitleClickType
 };
 
 export default OfferCard;
