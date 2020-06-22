@@ -1,18 +1,17 @@
 import React from "react";
 import Main from "../main/main.jsx";
-import {offersType, titlesType} from "../../types";
+import {offersType} from "../../types";
 
 const handleTitleClick = () => {};
 
 const App = (props) => {
-  const {offers, titles} = props;
+  const {offers} = props;
 
-  return (<Main offers={offers} titles={titles} onTitleClick={handleTitleClick}/>);
+  return (<Main offers={offers} onTitleClick={handleTitleClick}/>);
 };
 
 App.propTypes = {
   offers: offersType,
-  titles: titlesType
 };
 
 export default App;

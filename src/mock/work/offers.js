@@ -1,6 +1,6 @@
 const offers = [
   {
-    title: `luxurious apartment at great location - 1`,
+    title: `Beautiful & luxurious apartment at great location`,
     picture: `apartment-01.jpg`,
     price: 120,
     type: `Apartment`,
@@ -9,42 +9,41 @@ const offers = [
     isBookmark: true
   },
   {
-    title: `Wood and stone place - 10`,
+    title: `Wood and stone place`,
     picture: `apartment-01.jpg`,
-    price: 520,
+    price: 220,
     type: `Apartment`,
-    rating: 4,
-    isPremium: false,
-    isBookmark: true
-  },
-  {
-    title: `View Prinsengracht - Wood`,
-    picture: `apartment-01.jpg`,
-    price: 150,
-    type: `Apartment`,
-    rating: 5,
+    rating: 3,
     isPremium: false,
     isBookmark: false
   },
   {
-    title: `Nice, cozy, warm big bed apartment - 10`,
+    title: `Canal View Prinsengracht`,
+    picture: `apartment-01.jpg`,
+    price: 150,
+    type: `Apartment`,
+    rating: 2,
+    isPremium: false,
+    isBookmark: false
+  },
+  {
+    title: `Nice, cozy, warm big bed apartment`,
     picture: `apartment-01.jpg`,
     price: 850,
     type: `Apartment`,
-    rating: 3,
-    isPremium: true,
+    rating: 5,
+    isPremium: false,
     isBookmark: true
   },
   {
-    title: `Wood and stone place - 999`,
+    title: `Wood and stone place`,
     picture: `apartment-01.jpg`,
-    price: 750,
+    price: 450,
     type: `Apartment`,
-    rating: 5,
-    isPremium: false,
+    rating: 4.5,
+    isPremium: true,
     isBookmark: false
   }
 ];
 
 export {offers};
-
