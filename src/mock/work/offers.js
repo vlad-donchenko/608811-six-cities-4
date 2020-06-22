@@ -1,7 +1,7 @@
 const offers = [
   {
     title: `Beautiful & luxurious apartment at great location`,
-    picture: `img/apartment-01.jpg`,
+    picture: `apartment-01.jpg`,
     price: 120,
     type: `Apartment`,
     rating: 4,
@@ -10,7 +10,7 @@ const offers = [
   },
   {
     title: `Wood and stone place`,
-    picture: `img/apartment-01.jpg`,
+    picture: `apartment-01.jpg`,
     price: 220,
     type: `Apartment`,
     rating: 3,
@@ -19,7 +19,7 @@ const offers = [
   },
   {
     title: `Canal View Prinsengracht`,
-    picture: `img/apartment-01.jpg`,
+    picture: `apartment-01.jpg`,
     price: 150,
     type: `Apartment`,
     rating: 2,
@@ -28,7 +28,7 @@ const offers = [
   },
   {
     title: `Nice, cozy, warm big bed apartment`,
-    picture: `img/apartment-01.jpg`,
+    picture: `apartment-01.jpg`,
     price: 850,
     type: `Apartment`,
     rating: 5,
@@ -37,7 +37,7 @@ const offers = [
   },
   {
     title: `Wood and stone place`,
-    picture: `img/apartment-01.jpg`,
+    picture: `apartment-01.jpg`,
     price: 450,
     type: `Apartment`,
     rating: 4.5,
