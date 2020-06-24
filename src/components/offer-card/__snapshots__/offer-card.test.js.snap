@@ -94,7 +94,7 @@ exports[`Should render OfferCard 1`] = `
         href="#"
         onClick={[Function]}
       >
-        luxurious apartment at great location - 1
+        Beautiful & luxurious apartment at great location
       </a>
     </h2>
     <p
