@@ -3,7 +3,7 @@ import {offerType, onTitleClickType} from "../../types";
 
 const OfferCard = (props) => {
   const {offer, onTitleClick} = props;
-  const {title, picture, price, type, rating, isPremium, isBookmark} = offer;
+  const {id, title, picture, price, type, rating, isPremium, isBookmark} = offer;
 
   const premiumMarkup = isPremium ? (
     <div className="place-card__mark">
@@ -39,7 +39,9 @@ const OfferCard = (props) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#" onClick={onTitleClick}>{title}</a>
+          <a href="#" onClick={() => {
+            onTitleClick(String(id));
+          }}>{title}</a>
         </h2>
         <p className="place-card__type">{type}</p>
       </div>

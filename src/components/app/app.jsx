@@ -1,14 +1,59 @@
-import React from "react";
+import React, {PureComponent} from "react";
+import {Switch, Route, BrowserRouter} from "react-router-dom";
 import Main from "../main/main.jsx";
+import OfferDetails from "../offer-details/offer-details.jsx";
 import {offersType} from "../../types";
 
-const handleTitleClick = () => {};
+class App extends PureComponent {
+  constructor(props) {
+    super(props);
 
-const App = (props) => {
-  const {offers} = props;
+    this.state = {
+      siteId: null
+    };
 
-  return (<Main offers={offers} onTitleClick={handleTitleClick}/>);
-};
+    this._handleTitleClick = this._handleTitleClick.bind(this);
+  }
+
+  _renderApp() {
+    const {offers} = this.props;
+    const {siteId} = this.state;
+
+    if (siteId) {
+      const currentOffer = offers.find((offer) => {
+        return Number(offer.id) === Number(siteId);
+      });
+      return (
+        <OfferDetails offer={currentOffer}/>
+      );
+    }
+
+    return (<Main offers={offers} onTitleClick={this._handleTitleClick}/>);
+  }
+
+  render() {
+    const {offers} = this.props;
+
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            {this._renderApp()}
+          </Route>
+          <Route exact path="/details">
+            <OfferDetails offer={offers[0]}/>
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    );
+  }
+
+  _handleTitleClick(id) {
+    this.setState({
+      siteId: id,
+    });
+  }
+}
 
 App.propTypes = {
   offers: offersType,
