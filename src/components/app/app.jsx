@@ -40,8 +40,8 @@ class App extends PureComponent {
           <Route exact path="/">
             {this._renderApp()}
           </Route>
-          <Route exact path="/dev-component">
-            <Main offers={offers} onTitleClick={this._handleTitleClick}/>
+          <Route exact path="/details">
+            <OfferDetails offer={offers[0]}/>
           </Route>
         </Switch>
       </BrowserRouter>
