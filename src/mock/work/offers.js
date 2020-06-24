@@ -1,5 +1,6 @@
 const offers = [
   {
+    id: 0,
     title: `Beautiful & luxurious apartment at great location`,
     picture: `apartment-01.jpg`,
     gallery: [`room.jpg`, `apartment-01.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `studio-01.jpg`, `apartment-01.jpg`],
@@ -7,7 +8,7 @@ const offers = [
     type: `Apartment`,
     rating: 4,
     guests: 2,
-    bedrooms: 2,
+    bedroomsCount: 2,
     advantages: [`Wi-Fi`, `Heating`, `Kitchen`, `Fridge`, `Washing machine`, `Coffee machine`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
     isPremium: true,
     isBookmark: true,
@@ -19,14 +20,15 @@ const offers = [
     }
   },
   {
+    id: 1,
     title: `Wood and stone place`,
     picture: `apartment-01.jpg`,
     gallery: [`room.jpg`, `apartment-01.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `studio-01.jpg`, `apartment-01.jpg`],
     price: 220,
-    type: `Apartment`,
+    type: `Private room`,
     rating: 3,
     guests: 5,
-    bedrooms: 3,
+    bedroomsCount: 3,
     advantages: [`Wi-Fi`, `Heating`, `Kitchen`, `Coffee machine`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
     isPremium: false,
     isBookmark: false,
@@ -38,6 +40,7 @@ const offers = [
     }
   },
   {
+    id: 2,
     title: `Canal View Prinsengracht`,
     picture: `apartment-01.jpg`,
     gallery: [`room.jpg`, `apartment-01.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `studio-01.jpg`, `apartment-01.jpg`],
@@ -45,7 +48,7 @@ const offers = [
     type: `Apartment`,
     rating: 2,
     guests: 4,
-    bedrooms: 2,
+    bedroomsCount: 2,
     advantages: [`Wi-Fi`, `Heating`, `Kitchen`, `Coffee machine`, `Dishwasher`, `Towels`],
     isPremium: false,
     isBookmark: false,
@@ -57,6 +60,7 @@ const offers = [
     }
   },
   {
+    id: 3,
     title: `Nice, cozy, warm big bed apartment`,
     picture: `apartment-01.jpg`,
     gallery: [`room.jpg`, `apartment-01.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `studio-01.jpg`, `apartment-01.jpg`],
@@ -64,7 +68,7 @@ const offers = [
     type: `Apartment`,
     rating: 5,
     guests: 5,
-    bedrooms: 3,
+    bedroomsCount: 3,
     advantages: [`Wi-Fi`, `Coffee machine`, `Dishwasher`, `Towels`],
     isPremium: false,
     isBookmark: true,
@@ -76,14 +80,15 @@ const offers = [
     }
   },
   {
+    id: 4,
     title: `Wood and stone place`,
     picture: `apartment-01.jpg`,
     gallery: [`room.jpg`, `apartment-01.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `studio-01.jpg`, `apartment-01.jpg`],
     price: 450,
-    type: `Apartment`,
+    type: `Private room`,
     rating: 4.5,
     guests: 3,
-    bedrooms: 1,
+    bedroomsCount: 1,
     advantages: [`Wi-Fi`, `Dishwasher`, `Towels`],
     isPremium: true,
     isBookmark: false,
