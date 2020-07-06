@@ -1,6 +1,7 @@
 import React, {PureComponent} from "react";
 import leaflet from 'leaflet';
 import {icon} from "../../config/config";
+import {offersType} from "../../types";
 
 class Map extends PureComponent {
   constructor(props) {
@@ -50,9 +51,13 @@ class Map extends PureComponent {
 
   render() {
     return (
-      <section className="cities__map map" id="map" ref={this.mapRef}></section>
+      <div id="map" ref={this.mapRef} style={{height: `100%`}}></div>
     );
   }
+}
+
+Map.propTypes = {
+  offers: offersType
 }
 
 export default Map;
