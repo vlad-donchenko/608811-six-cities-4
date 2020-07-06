@@ -1,13 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Map from "./map";
-import {offers} from "../../mock/test/offers";
+import {offer} from "../../mock/test/offer";
 
 it(`MapCities is rendered correctly`, () => {
   Map.prototype.componentDidMount = jest.fn();
   const tree = renderer.create(
     <Map
-      offers={offers}
+      offers={offer}
     />,
     {
       createNodeMock: () => {

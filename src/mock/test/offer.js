@@ -1,4 +1,4 @@
-const offers = [
+const offer = [
   {
     id: 0,
     title: `Beautiful & luxurious apartment at great location`,
@@ -91,5 +91,5 @@ const offers = [
   }
 ];
 
-export {offers};
+export {offer};
 

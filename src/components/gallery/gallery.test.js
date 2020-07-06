@@ -1,9 +1,9 @@
 import React from "react";
 import renderer from 'react-test-renderer';
 import Gallery from "./gallery.jsx";
-import {offers} from "../../mock/test/offers";
+import {offer} from "../../mock/test/offer";
 
 it(`Should render Gallery`, () => {
-  const tree = renderer.create(<Gallery alt={offers[0].title} images={offers[0].gallery}/>).toJSON();
+  const tree = renderer.create(<Gallery alt={offer[0].title} images={offer[0].gallery}/>).toJSON();
   expect(tree);
 });

@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app.jsx";
-import {offers} from "./mock/work/offers";
+import {offer} from "./mock/work/offer";
 
 const init = () => {
-  ReactDOM.render(<App offers={offers}/>, document.querySelector(`#root`));
+  ReactDOM.render(<App offers={offer}/>, document.querySelector(`#root`));
 };
 
 init();

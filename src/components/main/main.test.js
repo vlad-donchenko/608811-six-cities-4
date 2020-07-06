@@ -2,12 +2,12 @@ import React from "react";
 import renderer from 'react-test-renderer';
 import Main from "./main";
 import Map from "../map/map.jsx";
-import {offers} from "../../mock/test/offers";
+import {offer} from "../../mock/test/offer";
 
 it(`Should render Main`, () => {
   Map.prototype.componentDidMount = jest.fn();
 
-  const tree = renderer.create(<Main offers={offers} onTitleClick={() => {}}/>,
+  const tree = renderer.create(<Main offers={offer} onTitleClick={() => {}}/>,
     {
       createNodeMock: () => {
         return document.createElement(`div`);
