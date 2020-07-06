@@ -17,6 +17,16 @@ const offers = [
       avatar: `avatar-angelina.jpg`,
       description: [`A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.`, `An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful.`],
       isPro: true
+    },
+    city: {
+      name: `Amsterdam`,
+      latitude: 52.38333,
+      longitude: 4.9,
+    },
+    coordinates: {
+      latitude: 52.3909553943508,
+      longitude: 4.85309666406198,
+      zoom: 12
     }
   },
   {
@@ -37,6 +47,16 @@ const offers = [
       avatar: `avatar-angelina.jpg`,
       description: [`A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.`, `An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful.`],
       isPro: false
+    },
+    city: {
+      name: `Amsterdam`,
+      latitude: 52.38333,
+      longitude: 4.9,
+    },
+    coordinates: {
+      latitude: 52.369553943508,
+      longitude: 4.85309666406198,
+      zoom: 12
     }
   },
   {
@@ -57,6 +77,16 @@ const offers = [
       avatar: `avatar-angelina.jpg`,
       description: [`A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.`, `An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful.`],
       isPro: true
+    },
+    city: {
+      name: `Amsterdam`,
+      latitude: 52.38333,
+      longitude: 4.9,
+    },
+    coordinates: {
+      latitude: 52.3909553943508,
+      longitude: 4.929309666406198,
+      zoom: 12
     }
   },
   {
@@ -77,26 +107,16 @@ const offers = [
       avatar: `avatar-angelina.jpg`,
       description: [`A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.`, `An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful.`],
       isPro: false
-    }
-  },
-  {
-    id: 4,
-    title: `Wood and stone place`,
-    picture: `apartment-01.jpg`,
-    gallery: [`room.jpg`, `apartment-01.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `studio-01.jpg`, `apartment-01.jpg`],
-    price: 450,
-    type: `Private room`,
-    rating: 4.5,
-    guests: 3,
-    bedroomsCount: 1,
-    advantages: [`Wi-Fi`, `Dishwasher`, `Towels`],
-    isPremium: true,
-    isBookmark: false,
-    host: {
-      name: `Angelina`,
-      avatar: `avatar-angelina.jpg`,
-      description: [`A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.`, `An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful.`],
-      isPro: true
+    },
+    city: {
+      name: `Amsterdam`,
+      latitude: 52.38333,
+      longitude: 4.9,
+    },
+    coordinates: {
+      latitude: 52.3809553943508,
+      longitude: 4.939309666406198,
+      zoom: 12
     }
   }
 ];
