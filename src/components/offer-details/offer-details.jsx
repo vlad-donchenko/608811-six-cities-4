@@ -8,12 +8,6 @@ const OfferDetails = (props) => {
   const {offer} = props;
   const {title, gallery, price, type, rating, guests, bedroomsCount, advantages, isPremium, isBookmark, host} = offer;
 
-  const premiumMarkup = isPremium ? (
-    <div className="property__mark">
-      <span>Premium</span>
-    </div>
-  ) : null;
-
   return (
     <div className="page">
       <header className="header">
@@ -46,7 +40,9 @@ const OfferDetails = (props) => {
           </div>
           <div className="property__container container">
             <div className="property__wrapper">
-              {premiumMarkup}
+              {isPremium && <div className="property__mark">
+                <span>Premium</span>
+              </div>}
               <div className="property__name-wrapper">
                 <h1 className="property__name">
                   {title}
