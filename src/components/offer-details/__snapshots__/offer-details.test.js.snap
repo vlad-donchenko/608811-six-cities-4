@@ -292,7 +292,7 @@ exports[`Should render OfferDetails 1`] = `
               <span
                 className="reviews__amount"
               >
-                1
+                5
               </span>
             </h2>
             <ul
