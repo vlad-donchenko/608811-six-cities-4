@@ -8,12 +8,12 @@ it(`Should render App`, () => {
   Map.prototype.componentDidMount = jest.fn();
 
   const tree = renderer.create(
-    <App offers={offer}/>,
-    {
-      createNodeMock: () => {
-        return document.createElement(`div`);
-      }
-    }).toJSON();
+      <App offers={offer}/>,
+      {
+        createNodeMock: () => {
+          return document.createElement(`div`);
+        }
+      }).toJSON();
 
   expect(tree).toMatchSnapshot();
 });

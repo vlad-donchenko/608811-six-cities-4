@@ -5,7 +5,7 @@ const getFormattedInUserDate = (date) => {
   const month = MONTH[currentDate.getMonth()];
   const year = currentDate.getFullYear();
 
-  return `${month} ${year}`
+  return `${month} ${year}`;
 };
 
 const getFormattedInDateTime = (date) => {
@@ -14,11 +14,11 @@ const getFormattedInDateTime = (date) => {
   const month = currentDate.getMonth() < 10 ? `0${currentDate.getMonth()}` : currentDate.getMonth();
   const year = currentDate.getFullYear() < 10 ? `0${currentDate.getFullYear()}` : currentDate.getFullYear();
 
-  return `${year}-${month}-${day}`
-}
+  return `${year}-${month}-${day}`;
+};
 
 const convertRatingInSvgWidth = (userRating) => {
-  return `${userRating * 10 * 2}%`
+  return `${userRating * 10 * 2}%`;
 };
 
 export {getFormattedInUserDate, getFormattedInDateTime, convertRatingInSvgWidth};
