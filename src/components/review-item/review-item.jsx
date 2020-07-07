@@ -1,6 +1,6 @@
 import React from "react";
 import {getFormattedInUserDate, getFormattedInDateTime, convertRatingInSvgWidth} from "../../utils";
-import {reviewsType} from "../../types";
+import {reviewType} from "../../types";
 
 const ReviewItem = (props) => {
   const {name, rating, avatar, text, date} = props.review;
@@ -28,11 +28,11 @@ const ReviewItem = (props) => {
         <time className="reviews__time" dateTime={getFormattedInDateTime(date)}>{getFormattedInUserDate(date)}</time>
       </div>
     </li>
-  )
+  );
 };
 
 ReviewItem.propTypes = {
-  reviews: reviewsType
-}
+  review: reviewType
+};
 
 export default ReviewItem;

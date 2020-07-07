@@ -33,15 +33,15 @@ const offerType = PropTypes.shape({
   host: hostType
 }).isRequired;
 
-const reviewsWithoutShapeType = PropTypes.array.isRequired;
+const reviewsType = PropTypes.array.isRequired;
 
-const reviewsType = PropTypes.shape({
+const reviewType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   date: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
   avatar: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired
-})
+});
 
-export {offersType, onTitleClickType, offerType, hostType, galleryImagesType, galleryAltType, advantagesType, listType, reviewsType, reviewsWithoutShapeType};
+export {offersType, onTitleClickType, offerType, hostType, galleryImagesType, galleryAltType, advantagesType, listType, reviewType, reviewsType};
