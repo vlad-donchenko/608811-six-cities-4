@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 
 const offersType = PropTypes.array.isRequired;
-const onTitleClickType = PropTypes.func.isRequired;
-
 const listType = PropTypes.arrayOf(PropTypes.string).isRequired;
 
 const hostType = PropTypes.shape({
@@ -14,7 +12,6 @@ const hostType = PropTypes.shape({
 
 const galleryImagesType = PropTypes.arrayOf(PropTypes.string).isRequired;
 const galleryAltType = PropTypes.string.isRequired;
-
 const advantagesType = PropTypes.arrayOf(PropTypes.string).isRequired;
 
 const offerType = PropTypes.shape({
@@ -44,4 +41,25 @@ const reviewType = PropTypes.shape({
   text: PropTypes.string.isRequired
 });
 
-export {offersType, onTitleClickType, offerType, hostType, galleryImagesType, galleryAltType, advantagesType, listType, reviewType, reviewsType};
+const classNameType = PropTypes.string;
+const prefixType = PropTypes.string;
+const childrenType = PropTypes.element;
+const onTitleClickType = PropTypes.func;
+const renderType = PropTypes.func;
+
+export {
+  offersType,
+  onTitleClickType,
+  offerType,
+  hostType,
+  galleryImagesType,
+  galleryAltType,
+  advantagesType,
+  listType,
+  reviewType,
+  reviewsType,
+  classNameType,
+  childrenType,
+  renderType,
+  prefixType
+};

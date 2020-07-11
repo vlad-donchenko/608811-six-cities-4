@@ -1,16 +1,20 @@
 import React from "react";
-import {offerType, onTitleClickType} from "../../types";
+import {classNameType, offerType, onTitleClickType, prefixType} from "../../types";
 
 const OfferCard = (props) => {
-  const {offer, onTitleClick} = props;
+  const {prefix, offer, onTitleClick, className} = props;
   const {id, title, picture, price, type, rating, isPremium, isBookmark} = offer;
 
+  const linkMarkup = onTitleClick ? <a href="#" onClick={() => {
+    onTitleClick(String(id));
+  }}>{title}</a> : <a style={{cursor: `default`}}>{title}</a>;
+
   return (
-    <article className="cities__place-card place-card">
+    <article className={`place-card ${className}`}>
       {isPremium && <div className="place-card__mark">
         <span>Premium</span>
       </div>}
-      <div className="cities__image-wrapper place-card__image-wrapper">
+      <div className={`${prefix}__image-wrapper place-card__image-wrapper`}>
         <a href="#">
           <img className="place-card__image" src={`img/${picture}`} width="260" height="200" alt="Place image"/>
         </a>
@@ -35,9 +39,7 @@ const OfferCard = (props) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#" onClick={() => {
-            onTitleClick(String(id));
-          }}>{title}</a>
+          {linkMarkup}
         </h2>
         <p className="place-card__type">{type}</p>
       </div>
@@ -47,6 +49,8 @@ const OfferCard = (props) => {
 
 OfferCard.propTypes = {
   offer: offerType,
+  prefix: prefixType,
+  className: classNameType,
   onTitleClick: onTitleClickType
 };
 
