@@ -47,6 +47,12 @@ const OfferCard = (props) => {
   );
 };
 
+OfferCard.defaultProps = {
+  prefix: ``,
+  className: ``,
+  onTitleClick: null
+};
+
 OfferCard.propTypes = {
   offer: offerType,
   prefix: prefixType,

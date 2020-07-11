@@ -11,7 +11,11 @@ Enzyme.configure({
 
 it(`Should title click`, () => {
   const handleTitleClick = jest.fn();
-  const main = shallow(<OfferCard offer={offer[0]} onTitleClick={handleTitleClick}/>);
+  const main = shallow(<OfferCard offer={offer[0]} onTitleClick={handleTitleClick}/>, {
+    createNodeMock: () => {
+      return document.createElement(`div`);
+    }
+  });
   main.find(`.place-card__name a`).simulate(`click`);
 
   expect(handleTitleClick.mock.calls.length).toBe(1);

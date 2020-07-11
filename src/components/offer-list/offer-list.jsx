@@ -26,6 +26,11 @@ const OfferList = (props) => {
   );
 };
 
+OfferList.defaultProps = {
+  className: ``,
+  onTitleClick: null
+};
+
 OfferList.propTypes = {
   className: classNameType,
   offers: offersType,
