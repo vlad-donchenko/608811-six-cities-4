@@ -5,4 +5,4 @@ const icon = leaflet.icon({
   iconSize: [30, 30]
 });
 
-export {icon}
+export {icon};

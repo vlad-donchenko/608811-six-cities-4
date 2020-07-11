@@ -1,6 +1,9 @@
-const offers = [
+import {OfferType} from "../../const";
+
+const offer = [
   {
     id: 0,
+    offerType: OfferType.CITY,
     title: `Beautiful & luxurious apartment at great location`,
     picture: `apartment-01.jpg`,
     gallery: [`room.jpg`, `apartment-01.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `studio-01.jpg`, `apartment-01.jpg`],
@@ -31,6 +34,7 @@ const offers = [
   },
   {
     id: 1,
+    offerType: OfferType.CITY,
     title: `Wood and stone place`,
     picture: `apartment-01.jpg`,
     gallery: [`room.jpg`, `apartment-01.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `studio-01.jpg`, `apartment-01.jpg`],
@@ -61,6 +65,7 @@ const offers = [
   },
   {
     id: 2,
+    offerType: OfferType.CITY,
     title: `Canal View Prinsengracht`,
     picture: `apartment-01.jpg`,
     gallery: [`room.jpg`, `apartment-01.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `studio-01.jpg`, `apartment-01.jpg`],
@@ -91,6 +96,7 @@ const offers = [
   },
   {
     id: 3,
+    offerType: OfferType.CITY,
     title: `Nice, cozy, warm big bed apartment`,
     picture: `apartment-01.jpg`,
     gallery: [`room.jpg`, `apartment-01.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `studio-01.jpg`, `apartment-01.jpg`],
@@ -121,4 +127,4 @@ const offers = [
   }
 ];
 
-export {offers};
+export {offer};

@@ -28,7 +28,7 @@ class Map extends PureComponent {
 
     leaflet
       .tileLayer(`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`, {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>`
       })
       .addTo(this._map);
 
@@ -46,7 +46,7 @@ class Map extends PureComponent {
   }
 
   componentWillUnmount() {
-    this._map.remove()
+    this._map.remove();
   }
 
   render() {
@@ -58,6 +58,6 @@ class Map extends PureComponent {
 
 Map.propTypes = {
   offers: offersType
-}
+};
 
 export default Map;

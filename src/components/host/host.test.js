@@ -1,9 +1,9 @@
 import React from "react";
 import renderer from 'react-test-renderer';
 import Host from "./host.jsx";
-import {offers} from "../../mock/test/offers";
+import {offer} from "../../mock/test/offer";
 
 it(`Should render Host`, () => {
-  const tree = renderer.create(<Host host={offers[0].host}/>).toJSON();
+  const tree = renderer.create(<Host host={offer[0].host}/>).toJSON();
   expect(tree).toMatchSnapshot();
 });
