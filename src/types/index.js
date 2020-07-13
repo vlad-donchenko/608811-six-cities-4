@@ -46,6 +46,7 @@ const prefixType = PropTypes.string;
 const childrenType = PropTypes.element;
 const onTitleClickType = PropTypes.func;
 const renderType = PropTypes.func;
+const offerIdType = PropTypes.string;
 
 export {
   offersType,
@@ -61,5 +62,6 @@ export {
   classNameType,
   childrenType,
   renderType,
-  prefixType
+  prefixType,
+  offerIdType
 };

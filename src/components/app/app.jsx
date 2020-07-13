@@ -1,34 +1,29 @@
 import React, {PureComponent} from "react";
+import {connect} from "react-redux";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
 import Main from "../main/main.jsx";
 import OfferDetails from "../offer-details/offer-details.jsx";
-import {offersType} from "../../types";
+import {offersType, onTitleClickType, offerIdType} from "../../types";
+import {ActionCreator} from "../../reducer";
 
 class App extends PureComponent {
   constructor(props) {
     super(props);
-
-    this.state = {
-      siteId: null
-    };
-
-    this._handleTitleClick = this._handleTitleClick.bind(this);
   }
 
   _renderApp() {
-    const {offers} = this.props;
-    const {siteId} = this.state;
+    const {offers, onTitleClick, offerId} = this.props;
 
-    if (siteId) {
+    if (offerId) {
       const currentOffer = offers.find((offer) => {
-        return Number(offer.id) === Number(siteId);
+        return Number(offer.id) === Number(offerId);
       });
       return (
         <OfferDetails offer={currentOffer}/>
       );
     }
 
-    return (<Main offers={offers} onTitleClick={this._handleTitleClick}/>);
+    return (<Main offers={offers} onTitleClick={onTitleClick}/>);
   }
 
   render() {
@@ -47,16 +42,27 @@ class App extends PureComponent {
       </BrowserRouter>
     );
   }
-
-  _handleTitleClick(id) {
-    this.setState({
-      siteId: id,
-    });
-  }
 }
+
+App.defaultProps = {
+  offerId: null
+};
 
 App.propTypes = {
   offers: offersType,
+  offerId: offerIdType,
+  onTitleClick: onTitleClickType
 };
 
-export default App;
+const mapSateToProps = (state) => ({
+  offerId: state.offerId
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  onTitleClick: (id) => {
+    dispatch(ActionCreator.changeOfferId(id));
+  }
+});
+
+export {App};
+export default connect(mapSateToProps, mapDispatchToProps)(App);

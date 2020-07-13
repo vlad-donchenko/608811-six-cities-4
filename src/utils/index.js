@@ -21,4 +21,8 @@ const convertRatingInSvgWidth = (userRating) => {
   return `${userRating * 10 * 2}%`;
 };
 
-export {getFormattedInUserDate, getFormattedInDateTime, convertRatingInSvgWidth};
+const extend = (a, b) => {
+  return Object.assign({}, a, b);
+};
+
+export {getFormattedInUserDate, getFormattedInDateTime, convertRatingInSvgWidth, extend};
