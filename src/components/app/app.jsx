@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
 import Main from "../main/main.jsx";
 import OfferDetails from "../offer-details/offer-details.jsx";
-import {offersType, onTitleClickType, offerIdType} from "../../types";
+import {offersType, onTitleClickType, offerIdType, activeCityType} from "../../types";
 import {ActionCreator} from "../../reducer";
 
 class App extends PureComponent {
@@ -49,13 +49,15 @@ App.defaultProps = {
 };
 
 App.propTypes = {
+  activeCity: activeCityType,
   offers: offersType,
   offerId: offerIdType,
   onTitleClick: onTitleClickType
 };
 
 const mapSateToProps = (state) => ({
-  offerId: state.offerId
+  offerId: state.offerId,
+  activeCity: state.activeCity
 });
 
 const mapDispatchToProps = (dispatch) => ({
