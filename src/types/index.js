@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 const offersType = PropTypes.array.isRequired;
 const listType = PropTypes.arrayOf(PropTypes.string).isRequired;
 const activeCityType = PropTypes.string.isRequired;
+const onTabLickClickType = PropTypes.func.isRequired;
 
 const hostType = PropTypes.shape({
   name: PropTypes.string.isRequired,
@@ -65,5 +66,6 @@ export {
   renderType,
   prefixType,
   offerIdType,
-  activeCityType
+  activeCityType,
+  onTabLickClickType
 };

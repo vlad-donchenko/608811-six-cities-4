@@ -12,7 +12,7 @@ class App extends PureComponent {
   }
 
   _renderApp() {
-    const {offers, onTitleClick, offerId} = this.props;
+    const {offers, onTitleClick, offerId, activeCity} = this.props;
 
     if (offerId) {
       const currentOffer = offers.find((offer) => {
@@ -23,7 +23,7 @@ class App extends PureComponent {
       );
     }
 
-    return (<Main offers={offers} onTitleClick={onTitleClick}/>);
+    return (<Main offers={offers} onTitleClick={onTitleClick} activeCity={activeCity}/>);
   }
 
   render() {

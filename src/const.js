@@ -1,4 +1,5 @@
 const MONTH = [`January`, `February`, `March`, `April`, `May`, `June`, `July`, `August`, `September`, `October`, `November`, `December`];
+const CITIES = [`Paris`, `Cologne`, `Brussels`, `Amsterdam`, `Hamburg`, `Dusseldorf`];
 
 const OfferType = {
   NEARBY: `nearby`,
@@ -19,4 +20,4 @@ const CityName = {
   DUSSELDORF: `Dusseldorf`
 };
 
-export {MONTH, CityName, OfferType, OfferCardPrefix};
+export {MONTH, CITIES, CityName, OfferType, OfferCardPrefix};

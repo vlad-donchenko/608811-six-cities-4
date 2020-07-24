@@ -1,16 +1,25 @@
 import React from "react";
-import {CityName} from "../../const";
+import {connect} from "react-redux";
+import {CITIES} from "../../const";
+import {ActionCreator} from "../../reducer";
+import {activeCityType, onTabLickClickType} from "../../types";
 
-const Tabs = () => {
-  const cities = Object.values(CityName);
+const Tabs = (props) => {
+  const {activeCity, onTabLickClick} = props;
 
   return (
     <div className="tabs">
       <section className="locations container">
         <ul className="locations__list tabs__list">
-          {cities.map((city, index) => (
+          {CITIES.slice().map((city, index) => (
             <li className="locations__item" key={`${city}-${index}`}>
-              <a className="locations__item-link tabs__item" href="#" id={city}>
+              <a className={`locations__item-link tabs__item ${activeCity === city ? `tabs__item--active` : ``}`}
+                href="#" id={city}
+                onClick={(evt) => {
+                  evt.preventDefault();
+                  onTabLickClick(city);
+                }}
+              >
                 <span>{city}</span>
               </a>
             </li>
@@ -21,4 +30,16 @@ const Tabs = () => {
   );
 };
 
-export default Tabs;
+Tabs.propTypes = {
+  activeCity: activeCityType,
+  onTabLickClick: onTabLickClickType
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  onTabLickClick: (city) => {
+    dispatch(ActionCreator.changeActiveCity(city));
+  }
+});
+
+export {Tabs};
+export default connect(null, mapDispatchToProps)(Tabs);

@@ -1,5 +1,5 @@
 import React from "react";
-import {offersType, onTitleClickType} from "../../types";
+import {activeCityType, offersType, onTitleClickType} from "../../types";
 import CityPlaces from "../city-places/city-places.jsx";
 import OfferListCity from "../offer-list-city/offer-list-city.jsx";
 import Sort from "../sort/sort.jsx";
@@ -8,14 +8,14 @@ import Header from "../header/header.jsx";
 import Map from "../map/map.jsx";
 
 const Main = (props) => {
-  const {offers, onTitleClick} = props;
+  const {offers, onTitleClick, activeCity} = props;
 
   return (
     <div className="page page--gray page--main">
       <Header/>
       <main className="page__main page__main--index">
         <h1 className="visually-hidden">Cities</h1>
-        <Tabs/>
+        <Tabs activeCity={activeCity}/>
         <div className="cities">
           <div className="cities__places-container container">
             <CityPlaces render={() => (
@@ -40,6 +40,7 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
+  activeCity: activeCityType,
   offers: offersType,
   onTitleClick: onTitleClickType
 };
